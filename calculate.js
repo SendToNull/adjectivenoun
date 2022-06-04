@@ -3440,11 +3440,6 @@ var nouns = [
 
 // ✅ Toggle button text on click
 btn.addEventListener("click", function handleClick() {
-  var prompt = adjectives[((Math.random() * 500000000) % adjectives.length).toFixed(0)] + " " + nouns[((Math.random() * 500000000) % nouns.length).toFixed(0)];
-  document.getElementById("myText").setAttribute("value", prompt);
+  var prompt = "<h1> " + adjectives[((Math.random() * 500000000) % adjectives.length).toFixed(0)] + " " + nouns[((Math.random() * 500000000) % nouns.length).toFixed(0)] + " </h1>";
+  document.getElementById("body").innerHTML = prompt;
 });
-
-function generate() {
-  prompt = adjectives[(Math.random() * max) % adjectives.length];
-  window.alert(prompt);
-}
